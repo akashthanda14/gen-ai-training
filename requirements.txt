@@ -1,0 +1,107 @@
+# Required packages for Gen AI with Python Teaching Curriculum
+
+# ============================================================================
+# Core LLM APIs
+# ============================================================================
+
+# OpenAI API client
+openai>=1.0.0
+
+# Google Generative AI client (Gemini)
+google-generativeai>=0.3.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+
+# ============================================================================
+# Structured Outputs & Validation (Module 2)
+# ============================================================================
+
+# Instructor - Industry standard for structured LLM outputs
+instructor>=1.0.0
+
+# Pydantic for data validation and structured outputs
+pydantic>=2.0.0
+pydantic[email]>=2.0.0
+
+
+# ============================================================================
+# FastAPI & Web Server (Module 4)
+# ============================================================================
+
+# FastAPI framework
+fastapi>=0.104.0
+
+# ASGI server for FastAPI
+uvicorn[standard]>=0.24.0
+
+# Rate limiting for FastAPI
+slowapi>=0.1.9
+
+
+# ============================================================================
+# Hugging Face & Local Models (Module 3)
+# ============================================================================
+
+# Hugging Face Transformers
+transformers>=4.35.0
+
+# PyTorch (CPU version - for GPU, see instructions below)
+torch>=2.1.0
+
+# Accelerate for model loading optimization
+accelerate>=0.24.0
+
+# Quantization support (4-bit, 8-bit)
+bitsandbytes>=0.41.0
+
+# SentencePiece tokenizer (for some models)
+sentencepiece>=0.1.99
+
+# Protobuf (required by some models)
+protobuf>=3.20.0
+
+
+# ============================================================================
+# HTTP & Networking
+# ============================================================================
+
+# HTTP requests (for Ollama integration)
+requests>=2.31.0
+
+# HTTP client with async support
+httpx>=0.25.0
+
+
+# ============================================================================
+# Optional: Development Tools
+# ============================================================================
+
+# Jupyter for interactive development (optional)
+# jupyter>=1.0.0
+# ipython>=8.17.0
+
+# Code formatting (optional)
+# black>=23.11.0
+# isort>=5.12.0
+
+
+# ============================================================================
+# Installation Notes
+# ============================================================================
+
+# For GPU support (NVIDIA):
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# For Apple Silicon (M1/M2):
+# PyTorch should automatically use MPS (Metal Performance Shaders)
+
+# For Ollama:
+# Install separately from https://ollama.com
+# macOS: brew install ollama
+# Linux: curl -fsSL https://ollama.com/install.sh | sh
+
+# Docker Command for Ollama:
+# docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+
