@@ -35,7 +35,7 @@ response = client.chat.completions.create(
         # User message is the actual query
         {
             "role": "user",
-            "content": "Explain the BODMAS Rule?"
+            "content": "Explain essay on cat"
         }
     ]
 )

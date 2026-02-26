@@ -5,11 +5,10 @@ from openai import OpenAI
 load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-# client = OpenAI("eqfoneqoeqofneqonnnenq")
 
 response = client.responses.create(
-    model="gpt-4o-mini",
-    input="Hello!"
+    model="gpt-5-nano",
+    input="Write a one-sentence bedtime story about a unicorn."
 )
 
 print(response.output_text)
